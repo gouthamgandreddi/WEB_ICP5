@@ -1,0 +1,40 @@
+
+<div class="jumbotron text-center">
+  <h1>To Do List</h1>
+  <p>Hope that you finish the tasks you created!</p>
+</div>
+
+<div class="container">
+
+  <div class="row">
+    <input class="col-md-3" [(ngModel)]="calInput" name="calculator" placeholder="0">
+  </div>
+  <div class="row">
+    <button class="col-md-1 col-lg-1" (click)="num(1)">1</button>
+    <button class="col-md-1 col-lg-1" (click)="num(2)">2</button>
+    <button class="col-md-1 col-lg-1" (click)="num(3)">3</button>
+  </div>
+  <div class="row">
+    <button class="col-md-1 col-lg-1" (click)="num(4)">4</button>
+    <button class="col-md-1 col-lg-1" (click)="num(5)">5</button>
+    <button class="col-md-1 col-lg-1" (click)="num(6)">6</button>
+  </div>
+  <div class="row" >
+    <button class="col-md-1 col-lg-1" (click)="num(7)">7</button>
+    <button class="col-md-1 col-lg-1" (click)="num(8)">8</button>
+    <button class="col-md-1 col-lg-1" (click)="num(9)">9</button>
+  </div>
+  <div class="row" >
+    <button class="col-md-1 col-lg-1" (click)="num(0)">0</button>
+    <button class="col-md-1 col-lg-1" (click)="clear()"> clear </button>
+    <button class="col-md-1 col-lg-2" (click)="operation('mul')" class="operator"> * </button>
+    <button class="col-md-1 col-lg-2" (click)="operation('add')" class="operator"> + </button>
+    <button class="col-md-1 col-lg-2" (click)="operation('sub')" class="operator"> - </button>
+    <button class="col-md-1 col-lg-2" (click)="operation('div')" class="operator"> / </button>
+  </div>
+  <div class="row">
+    <button class="col-md-3 col-lg-3" (click)="result()"> = </button>
+  </div>
+
+</div>
+

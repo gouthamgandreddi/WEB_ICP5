@@ -1,0 +1,34 @@
+
+<div class="jumbotron text-center">
+  <h1>To Do List</h1>
+  <p>Hope that you finish the tasks you created!</p>
+</div>
+
+<div class="container">
+
+<div class="row">
+<div class="col-md-8">
+<form (submit)="submitNewItem(postTitle,postContent)">
+  <input [(ngModel)]="postTitle" name="title" placeholder="Title">
+  <input [(ngModel)]="postContent" style="width: 400px" name="content" placeholder=" to-do: content goes here">
+  <button class="btn btn-primary" type="submit">Create a Todo</button>
+</form>
+</div>
+</div>
+
+<div class="row">
+  <div class="col-md-7">
+  <mat-accordion *ngIf="posts.length > 0">
+    <mat-expansion-panel *ngFor="let post of posts">
+      <mat-expansion-panel-header><b>{{post.title}}</b></mat-expansion-panel-header>
+      <p style="background-color: #79BD9A">{{post.content}}</p>
+      <mat-action-row>
+                <button mat-button color="primary" (click)="deleteItem(post.id)">Delete</button>
+      </mat-action-row>
+    </mat-expansion-panel>
+  </mat-accordion>
+  </div>
+</div>
+
+</div>
+
